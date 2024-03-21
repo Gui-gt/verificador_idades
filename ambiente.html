@@ -28,7 +28,6 @@
             text-align: center;
             margin-top: 150px;
         }
-        in
     </style>
 </head>
 <body>
@@ -44,10 +43,21 @@
                 <input type="radio" name="radsex" id="fem">
                 <label for="fem">feminino</label>
                 <br>
-                <input type="button" value="verificar">
+                <input type="button" value="verificar" onclick="verificar()">
             </p>
         </div>
-        <div></div>
+        <div id="res"></div>
     </section>
+    <script>
+        function verificar(){
+            var data = new Date()
+            var ano = data.getFullYear()
+            var fano = document.getElementById('txtano')
+            var res = document.getElementById('res')
+            if(fano.value.length == 0 || fano.value > ano){
+                alert(`[erro] data invalida`)
+            }
+        }
+    </script>
 </body>
 </html>
