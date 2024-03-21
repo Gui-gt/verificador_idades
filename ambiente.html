@@ -56,6 +56,26 @@
             var res = document.getElementById('res')
             if(fano.value.length == 0 || fano.value > ano){
                 alert(`[erro] data invalida`)
+            }else{
+                var idade = Number(fano.value) - ano
+                var genero = ''
+                var img = document.createElement('img')
+                img.setAttribute('id','foto')
+                var fsex = document.getElementsByName('radsex')
+                if(fsex[0].checked){
+                    genero = 'homem'
+                    if(idade >= 0 && idade < 10){
+                        //criança
+                    }else if(idade >= 10 && idade < 21){
+                        //adole
+                    }else if(idade >= 21 && idade < 50){
+                        //adulto
+                    }else{
+                        //idoso
+                    }
+                }else if(fsex[1].checked){
+                    
+                }res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
             }
         }
     </script>
