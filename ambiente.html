@@ -22,12 +22,38 @@
             left: 50%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.464);
             transform: translate(-50%,-50%);
+            width: 300px;
+            height: 400px;
+            text-align: center;
         }
         h1{
             color: white;
             text-align: center;
-            margin-top: 150px;
+            margin-top: 50px;
         }
+        input{
+            border:1px solid black;
+            outline: none;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 10px;
+        }
+        #botao{
+            background-color: brown;
+            color: white;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s;
+        }
+        #botao:hover{
+            background-color: coral;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+        }
+        img{
+            margin: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -40,10 +66,10 @@
             <p>
                 sexo: <input type="radio" name="radsex" id="mas">
                 <label for="mas">masculino</label>
-                <input type="radio" name="radsex" id="fem">
+                <input type="radio" name="radsex" checked id="fem">
                 <label for="fem">feminino</label>
                 <br>
-                <input type="button" value="verificar" onclick="verificar()">
+                <input id="botao"  type="button" value="verificar" onclick="verificar()">
             </p>
         </div>
         <div id="res"></div>
